@@ -1,0 +1,30 @@
+[project]
+name = "voice-service-desk"
+version = "0.1.0"
+description = "Phone-callable voice agent resolving IT service desk intents"
+requires-python = ">=3.11"
+dependencies = [
+    "livekit-agents[deepgram,google,cartesia,openai,anthropic,silero,mcp,nvidia,sarvam]>=1.8.3",
+    "python-dotenv>=1.0",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "httpx>=0.27",
+    "daytona>=0.201.0",
+    "tavily-python>=0.7.26",
+    "supermemory>=3.56.0",
+    "twilio>=9.10.9",
+    "pinecone>=3.0.0",
+    "mistralai>=1.0.0",
+    "python-multipart>=0.0.9",
+    "psycopg[binary,pool]>=3.2",
+    "boto3>=1.35",
+    "pyjwt[crypto]>=2.9",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24"]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
