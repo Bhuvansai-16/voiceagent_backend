@@ -1,4 +1,4 @@
-# Voice Service Desk — Backend
+# Voice agent
 
 A real-time **voice AI agent platform**: callers talk to an agent from a browser
 or an ordinary phone, and the agent looks up tickets, resets passwords, searches
